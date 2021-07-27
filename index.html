@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav>
+      <ul class="menu">
+        <li class="logo" onClick="window.location.reload();">
+          <img id="logo" src="assets/logo.svg" alt="logo Bookshelf" />
+        </li>
+        <li class="item">
+          <form class="form-search" action="#" id="formSearch">
+            <input
+              type="text"
+              id="inputSearchBooks"
+              name="search"
+              placeholder="Search"
+              required
+            />
+            <button id="btnSearchBooks" class="btn btn-search">Search</button>
+          </form>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="searchResult" class="book-list-search" style="width: 100%"></div>
+
+    <div class="container">
+      <!-- <button type="button" class="btn-add">Add Book</button> -->
+      <form id="formBook" class="form-add-books">
+        <label for="title">Book Title</label>
+        <input class="form-input" type="text" id="title" />
+        <label for="author">Author</label>
+        <input class="form-input" type="text" id="author" />
+        <label for="year">Year</label>
+        <input class="form-input" type="number" id="year" />
+        <label for="isCompleted">Completed Read</label>
+        <input type="checkbox" id="isCompleted" />
+        <button id="btnSubmitBook" class="btn btn-save-books" type="submit">
+          save
+        </button>
+      </form>
+    </div>
+
+    <div class="container">
+      <h2>incompleteBook</h2>
+      <div class="content-books">
+        <div id="incompleteBook" class="book-list"></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2>completedBook</h2>
+      <div class="content-books">
+        <div id="completedBook" class="book-list"></div>
+      </div>
+    </div>
+
+    <script src="js/variable.js"></script>
+    <script src="js/function.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
